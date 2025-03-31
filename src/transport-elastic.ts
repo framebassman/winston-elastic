@@ -25,7 +25,7 @@ class WinstonElastic extends WinstonTransport {
     if (this.silent) { next(); return }
 
     await this.elastic.index({
-      document: info,
+      body: info,
       index: this.index
     })
 

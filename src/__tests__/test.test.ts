@@ -58,7 +58,7 @@ test('Should send logs with success to elasticsearch', async t => {
 
   t.is(stubElastic.calledOnce, true)
   t.is(stubElastic.calledWithMatch({
-    document: {
+    body: {
       message: 'testing',
       level: 'info'
     },
