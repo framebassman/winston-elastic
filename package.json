@@ -1,5 +1,5 @@
 {
-  "name": "elasticsearch-transport",
+  "name": "framebassman-elasticsearch-transport",
   "version": "7.10.0",
   "description": "Winston tranport to save logs in elasticsearch",
   "main": "dist/index.js",
@@ -21,12 +21,14 @@
     "dist"
   ],
   "types": "dist/types",
-  "repository": "https://github.com/ramonpaolo/winston-elastic",
-  "readme": "https://github.com/ramonpaolo/winston-elastic#readme",
-  "bugs": {
-    "url": "https://github.com/ramonpaolo/winston-elastic/issue"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/framebassman/winston-elastic.git"
   },
-  "author": "Ramon Paolo Maram",
+  "bugs": {
+    "url": "https://github.com/framebassman/winston-elastic/issue"
+  },
+  "author": "Dmitry Romashov",
   "license": "MIT",
   "private": false,
   "keywords": [
@@ -60,5 +62,6 @@
     "eslint-plugin-promise": "^6.1.1",
     "sinon": "^15.2.0",
     "typescript": "^5.2.2"
-  }
+  },
+  "homepage": "https://github.com/framebassman/winston-elastic#readme"
 }
