@@ -11,7 +11,8 @@ test('Transport Elastic is associate with success how to transport in winston', 
         silent: false,
         elasticClient: {
           node: 'http://localhost:9200'
-        }
+        },
+        index: 'log'
       })
     ]
   })
@@ -26,7 +27,8 @@ test('Transport Elastic is associate with success how to transport in winston', 
       elasticClient: {
         node: 'http://localhost:9200'
       },
-      silent: false
+      silent: false,
+      index: 'log'
     }
   })
 })
@@ -38,7 +40,8 @@ test('Should send logs with success to elasticsearch', async t => {
     silent: false,
     elasticClient: {
       node: 'http://localhost:9200'
-    }
+    },
+    index: 'log'
   })
 
   const stubElastic = sandbox.stub(winstonElastic.elastic, 'index')
