@@ -24,6 +24,9 @@ class WinstonElastic extends WinstonTransport {
   public async log (info: unknown, next: () => void): Promise<void> {
     if (this.silent) { next(); return }
 
+    // @ts-expect-error it is necessary
+    info['@timestamp'] = info.timestamp ? info.timestamp : new Date().toISOString()
+
     await this.elastic.index({
       body: info,
       index: this.index

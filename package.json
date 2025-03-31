@@ -1,7 +1,7 @@
 {
   "name": "framebassman-elasticsearch-transport",
   "version": "7.10.0",
-  "description": "Winston tranport to save logs in elasticsearch",
+  "description": "Winston transport to save logs in elasticsearch",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",

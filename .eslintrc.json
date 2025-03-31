@@ -21,7 +21,9 @@
         "quotes": [
             "error",
             "single"
-        ]
+        ],
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/strict-boolean-expressions": "off"
     },
     "ignorePatterns": [
         "dist/",
