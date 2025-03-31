@@ -1,6 +1,6 @@
 {
   "name": "elasticsearch-transport",
-  "version": "0.0.1",
+  "version": "7.10.0",
   "description": "Winston tranport to save logs in elasticsearch",
   "main": "dist/index.js",
   "scripts": {
