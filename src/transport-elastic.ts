@@ -9,12 +9,14 @@ class WinstonElastic extends WinstonTransport {
   public options: IOptions
   public elastic: Client
   public silent: boolean
+  public index: string
 
   constructor (options: IOptions) {
     super(options)
 
     this.options = options
     this.silent = options.silent || false
+    this.index = options.index !== '' ? options.index : 'log'
 
     this.elastic = createConnection(options.elasticClient)
   }
@@ -24,7 +26,7 @@ class WinstonElastic extends WinstonTransport {
 
     await this.elastic.index({
       document: info,
-      index: 'log'
+      index: this.index
     })
 
     next()
