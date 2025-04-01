@@ -26,6 +26,9 @@ class WinstonElastic extends WinstonTransport {
 
     // @ts-expect-error it is necessary
     info['@timestamp'] = info.timestamp ? info.timestamp : new Date().toISOString()
+    const prop = 'timestamp'
+    // @ts-expect-error it is necessary
+    delete info[prop]
 
     await this.elastic.index({
       body: info,
